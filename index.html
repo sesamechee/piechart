@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hk">
+<head></head>
+<body>
+
+<div id="pieChart"></div>
+
+<script src="d3.min.js"></script>
+<script src="d3pie.js"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"size": {
+		"canvasHeight": 600,
+		"canvasWidth": 1000,
+		"pieOuterRadius": "88%"
+	},
+	"data": {
+		"sortOrder": "value-asc",
+		"content": [
+			{
+				"label": "When's it going to be done?",
+				"value": 8,
+				"color": "#7e3838"
+			},
+			{
+				"label": "Bennnnn!",
+				"value": 5,
+				"color": "#7e6538"
+			},
+			{
+				"label": "Oh, god.",
+				"value": 2,
+				"color": "#7c7e38"
+			},
+			{
+				"label": "But it's Friday night!",
+				"value": 3,
+				"color": "#587e38"
+			},
+			{
+				"label": "Again?",
+				"value": 2,
+				"color": "#387e45"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 50
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"font": "verdana",
+			"fontSize": 12
+		},
+		"percentage": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"decimalPlaces": 0,
+			"fontSize": 15
+		},
+		"lines": {
+			"enabled": true,
+			"color": "#000000",
+			"style": "pointer"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "none",
+			"speed": 400,
+			"size": 0
+		}
+	}
+});
+</script>
+
+</body>
+</html>
